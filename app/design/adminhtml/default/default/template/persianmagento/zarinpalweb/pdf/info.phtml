@@ -1,0 +1,21 @@
+<?php
+ /**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category   Persian Magento
+ * @package    Persianmagento_Zarinpalweb
+ * @copyright  Copyright (c) 1396 Persian Magento (http://www.persian-magento.ir)
+ */ 
+?>
+
+<?php 
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		echo $this->__('Payment has not been processed yet.') . '<br/>';
+	} else {
+		echo $this->__('Zarinpal Transaction ID: %s', $this->htmlEscape($this->getInfo()->getLastTransId())) . '<br/>';
+	}
+?>
+
