@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Persianmagento_Zarinpalzar>
+      <active>true</active>	  
+      <codePool>community</codePool>	  
+	  <depends>
+	    <Mage_Payment />
+	  </depends>	  
+	  <version>1.0.1</version>
+    </Persianmagento_Zarinpalzar>
+  </modules>
+</config>
