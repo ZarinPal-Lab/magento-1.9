@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+ * @category   Persian Magento
+ * @package    Persianmagento_Zarinpalzar
+ * @copyright  Copyright (c) 1396 Persian Magento (http://www.persian-magento.ir)
+*/
+-->
+<config>
+	<modules>
+		<Persianmagento_Zarinpalzar>
+			<version>1.0.1</version>
+		</Persianmagento_Zarinpalzar>
+	</modules>
+	
+    <global>
+        <models>
+            <zarinpalzar>
+                <class>Persianmagento_Zarinpalzar_Model</class>
+            </zarinpalzar>
+        </models>
+		
+        <helpers>
+            <zarinpalzar>
+                <class>Persianmagento_Zarinpalzar_Helper</class>
+            </zarinpalzar>
+        </helpers>
+		
+        <resources>
+            <zarinpalzar_setup>
+                <setup>
+                    <module>Persianmagento_Zarinpalzar</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </zarinpalzar_setup>			
+            <zarinpalzar_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </zarinpalzar_write>			
+            <zarinpalzar_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </zarinpalzar_read>
+        </resources>
+		
+        <blocks>
+            <zarinpalzar>
+				<class>Persianmagento_Zarinpalzar_Block</class>
+			</zarinpalzar>
+        </blocks>
+    </global>
+
+    <frontend>
+        <secure_url>
+            <zarinpalzar_redirect>/zarinpalzar/redirect</zarinpalzar_redirect>
+        </secure_url>		
+        <routers>
+            <zarinpalzar>
+                <use>standard</use>
+                <args>
+                    <module>Persianmagento_Zarinpalzar</module>
+                    <frontName>zarinpalzar</frontName>
+                </args>
+            </zarinpalzar>
+        </routers>		
+        <translate>
+            <modules>
+                <Persianmagento_Zarinpalzar>
+                    <files>
+                        <default>Persianmagento_Zarinpalzar.csv</default>
+                    </files>
+                </Persianmagento_Zarinpalzar>
+            </modules>
+        </translate>		
+        <layout>
+            <updates>
+                <zarinpalzar>
+                    <file>zarinpalzar.xml</file>
+                </zarinpalzar>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Persianmagento_Zarinpalzar>
+                    <files>
+                        <default>Persianmagento_Zarinpalzar.csv</default>
+                    </files>
+                </Persianmagento_Zarinpalzar>
+            </modules>
+        </translate>
+    </adminhtml>
+	
+	<persianmagento>
+		<zarinpalzar>
+			<verify_url>http://www.persian-magento.ir</verify_url>
+		</zarinpalzar>
+	</persianmagento>
+	
+    <default>
+        <payment>
+            <zarinpalzar>
+                <active>0</active>
+                <model>zarinpalzar/zarinpalzar</model>
+				<order_status>1</order_status>
+                <second_order_status>3</second_order_status>
+                <allowspecific>0</allowspecific>
+                <title>Zarinpal Online Payment</title>
+				<gateway>0</gateway>
+				<payer_Id>0</payer_Id>
+				<pgwpay_url>0</pgwpay_url>
+            </zarinpalzar>
+        </payment>
+    </default>
+	
+</config>
